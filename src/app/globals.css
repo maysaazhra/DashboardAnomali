@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  @media print {
+    body {
+      background-color: white !important;
+      color: black !important;
+    }
+    header, footer, nav, button {
+      display: none !important;
+    }
+  }
+}
